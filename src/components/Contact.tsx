@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Phone, MapPin, Clock } from "lucide-react";
+import { Phone, MapPin, Clock, Instagram } from "lucide-react";
 import doctorImage from "@/assets/doctor-3.jpg";
 
 const Contact = () => {
@@ -33,27 +33,39 @@ const Contact = () => {
             </Button>
           </div>
 
+          <div className="flex justify-center mb-12">
+            <Button
+              variant="outline"
+              size="lg"
+              className="gap-2 border-primary/40 bg-card/60 px-8 py-6 text-base text-foreground hover:border-primary hover:bg-primary/10 hover:text-primary"
+              onClick={() => window.open("https://www.instagram.com/marcoklasener/", "_blank")}
+            >
+              <Instagram className="h-5 w-5" />
+              <span>Siga no Instagram</span>
+            </Button>
+          </div>
+
           <div className="grid md:grid-cols-2 gap-8 mt-16">
-            <div className="bg-card p-8 rounded-2xl border border-border">
+            <div className="bg-card p-8 rounded-lg border border-border">
               <MapPin className="w-8 h-8 text-primary mb-4" />
-              <h3 className="text-xl font-bold mb-2">Panambi</h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-2xl font-bold mb-3 text-primary">Clínica Marco Kläsener</h3>
+              <p className="text-muted-foreground leading-relaxed">
                 Rua Benjamin Constant, 402<br />
                 Centro, Panambi/RS
               </p>
             </div>
 
-            <div className="bg-card p-8 rounded-2xl border border-border">
+            <div className="bg-card p-8 rounded-lg border border-border">
               <MapPin className="w-8 h-8 text-primary mb-4" />
-              <h3 className="text-xl font-bold mb-2">Passo Fundo</h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-2xl font-bold mb-3 text-primary">Unidade Passo Fundo</h3>
+              <p className="text-muted-foreground leading-relaxed">
                 Rua Doutor Vergueiro, 411<br />
                 Vila Rodrigues, Passo Fundo/RS
               </p>
             </div>
           </div>
 
-          <div className="mt-8 bg-card p-8 rounded-2xl border border-border text-center">
+          <div className="mt-8 bg-card p-8 rounded-lg border border-border text-center">
             <Clock className="w-8 h-8 text-primary mb-4 mx-auto" />
             <h3 className="text-xl font-bold mb-2">Horário de Atendimento</h3>
             <p className="text-muted-foreground">

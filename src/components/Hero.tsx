@@ -1,12 +1,20 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import doctorImage from "@/assets/doctor-1.jpg";
+import heroBg from "@/assets/fundo01.webp";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-card to-background" />
+    <section className="relative flex min-h-screen items-center overflow-hidden">
+      {/* Background image with subtle overlay */}
+      <div className="absolute inset-0">
+        <img
+          src={heroBg}
+          alt=""
+          className="h-full w-full object-cover opacity-30"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-background/80 via-background/65 to-background/90" />
+      </div>
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -38,11 +46,11 @@ const Hero = () => {
           {/* Image */}
           <div className="relative animate-slide-up lg:justify-self-end">
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-3xl transform rotate-3" />
+              <div className="absolute inset-0 rotate-3 rounded-sm bg-gradient-to-br from-primary/20 to-accent/20" />
               <img
                 src={doctorImage}
                 alt="Dr. Marco Kläsener"
-                className="relative rounded-3xl shadow-2xl w-full max-w-lg object-cover"
+                className="relative w-full max-w-lg rounded-sm object-cover shadow-2xl"
               />
             </div>
           </div>
@@ -50,8 +58,8 @@ const Hero = () => {
       </div>
 
       {/* Decorative elements */}
-      <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
+      <div className="absolute right-0 top-1/4 h-80 w-80 rounded-full bg-primary/5 blur-3xl" />
+      <div className="absolute bottom-1/4 left-0 h-80 w-80 rounded-full bg-accent/5 blur-3xl" />
     </section>
   );
 };

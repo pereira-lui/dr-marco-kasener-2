@@ -30,7 +30,7 @@ const Header = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <img src={logo} alt="Dr. Marco Kläsener" className="h-8 md:h-10" />
+            <img src={logo} alt="Dr. Marco Kläsener" className="h-12 md:h-14" />
           </div>
 
           <nav className="hidden md:flex items-center gap-8">

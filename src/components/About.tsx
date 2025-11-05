@@ -8,11 +8,11 @@ const About = () => {
           {/* Image */}
           <div className="relative order-2 lg:order-1">
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 rounded-3xl transform -rotate-3" />
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl transform -rotate-3" />
               <img
                 src={doctorImage}
                 alt="Dr. Marco Kläsener"
-                className="relative rounded-3xl shadow-2xl w-full object-cover"
+                className="relative rounded-xl shadow-2xl w-full object-cover"
               />
             </div>
           </div>
