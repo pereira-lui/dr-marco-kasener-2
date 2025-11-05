@@ -131,7 +131,7 @@ const Environment = () => {
                           </div>
                         </button>
                       </DialogTrigger>
-                      <DialogContent className="max-w-5xl overflow-hidden border border-border/60 bg-background/98 p-0 text-foreground shadow-2xl backdrop-blur-sm sm:rounded-lg">
+                      <DialogContent className="max-w-5xl overflow-hidden border-0 bg-transparent p-0 shadow-none sm:rounded-none">
                         <div className="relative">
                           <img
                             src={photo.src}

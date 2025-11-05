@@ -169,6 +169,21 @@ All colors MUST be HSL.
     transform: scale(0.85);
   }
 
+  /* Exceção: imagens de fundo devem manter cover completo */
+  img[class*="object-cover"],
+  .absolute img,
+  [class*="absolute"] img {
+    transform: none !important;
+    object-fit: cover !important;
+  }
+
+  /* Exceção: imagens da galeria/carousel não devem ter scale */
+  [class*="CarouselItem"] img,
+  [class*="carousel"] img,
+  button img {
+    transform: none !important;
+  }
+
   /* Reduzir padding de cards e elementos */
   [class*="p-8"],
   [class*="p-10"] {
@@ -257,6 +272,15 @@ All colors MUST be HSL.
 
   [class*="gap-16"] {
     gap: 2.5rem !important;
+  }
+
+  /* Reduzir espaçamento entre itens do menu */
+  nav [class*="gap-8"] {
+    gap: 1rem !important;
+  }
+
+  header nav {
+    gap: 1rem !important;
   }
 
   /* Reduzir altura de elementos decorativos */
