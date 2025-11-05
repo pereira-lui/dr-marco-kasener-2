@@ -116,3 +116,157 @@ All colors MUST be HSL.
     }
   }
 }
+
+/* Media query para monitores de notebook (1024px - 1430px) */
+@media (min-width: 1024px) and (max-width: 1430px) {
+  /* Redução de espaçamentos gerais */
+  section {
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
+  }
+
+  /* Hero - Reduzir altura */
+  section:has(.min-h-screen) {
+    min-height: 75vh !important;
+  }
+
+  /* Reduzir fontes */
+  h1 {
+    font-size: 2.25rem !important;
+    line-height: 2.5rem !important;
+  }
+
+  h2 {
+    font-size: 1.875rem !important;
+    line-height: 2.25rem !important;
+  }
+
+  h3 {
+    font-size: 1.25rem !important;
+    line-height: 1.75rem !important;
+  }
+
+  p {
+    font-size: 0.95rem !important;
+  }
+
+  /* Reduzir padding do container */
+  .container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    max-width: 90% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* Reduzir gaps nos grids */
+  .grid {
+    gap: 1.5rem !important;
+  }
+
+  /* Reduzir tamanho de imagens */
+  img:not(.logo) {
+    transform: scale(0.85);
+  }
+
+  /* Reduzir padding de cards e elementos */
+  [class*="p-8"],
+  [class*="p-10"] {
+    padding: 1.5rem !important;
+  }
+
+  [class*="py-24"],
+  [class*="py-32"] {
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
+  }
+
+  /* Reduzir tamanho de botões */
+  button,
+  [role="button"],
+  .button {
+    font-size: 0.875rem !important;
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+    padding-top: 0.875rem !important;
+    padding-bottom: 0.875rem !important;
+  }
+
+  /* Reduzir ícones */
+  svg:not([class*="logo"]) {
+    width: 1.125rem !important;
+    height: 1.125rem !important;
+  }
+
+  /* Reduzir espaçamentos verticais */
+  [class*="space-y-8"] > * + * {
+    margin-top: 1.5rem !important;
+  }
+
+  [class*="space-y-6"] > * + * {
+    margin-top: 1rem !important;
+  }
+
+  [class*="space-y-4"] > * + * {
+    margin-top: 0.75rem !important;
+  }
+
+  /* Reduzir margens bottom */
+  [class*="mb-12"] {
+    margin-bottom: 2rem !important;
+  }
+
+  [class*="mb-16"] {
+    margin-bottom: 2.5rem !important;
+  }
+
+  [class*="mb-20"] {
+    margin-bottom: 3rem !important;
+  }
+
+  /* Reduzir margens top */
+  [class*="mt-12"] {
+    margin-top: 2rem !important;
+  }
+
+  [class*="mt-16"] {
+    margin-top: 2.5rem !important;
+  }
+
+  /* Ajustar max-width de conteúdo */
+  .max-w-4xl {
+    max-width: 48rem !important;
+  }
+
+  .max-w-5xl {
+    max-width: 56rem !important;
+  }
+
+  .max-w-6xl {
+    max-width: 60rem !important;
+  }
+
+  .max-w-7xl {
+    max-width: 68rem !important;
+  }
+
+  /* Ajustar gaps específicos */
+  [class*="gap-12"] {
+    gap: 2rem !important;
+  }
+
+  [class*="gap-16"] {
+    gap: 2.5rem !important;
+  }
+
+  /* Reduzir altura de elementos decorativos */
+  [class*="h-80"] {
+    height: 15rem !important;
+  }
+
+  [class*="w-80"] {
+    width: 15rem !important;
+  }
+}
+
+

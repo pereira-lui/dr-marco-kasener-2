@@ -2,9 +2,8 @@ import consultorio1 from "@/assets/consultorio/IMG_1791.webp";
 import consultorio2 from "@/assets/consultorio/IMG_1793.webp";
 import consultorio3 from "@/assets/consultorio/IMG_1796.webp";
 import consultorio4 from "@/assets/consultorio/IMG_1799.webp";
-import fundo02 from "@/assets/fundo02.webp";
 import { Dialog, DialogContent, DialogTrigger, DialogClose } from "@/components/ui/dialog";
-import { Maximize2, X, Sparkles, ChevronLeft, ChevronRight } from "lucide-react";
+import { Maximize2, X, Sparkles } from "lucide-react";
 import {
   Carousel,
   CarouselContent,
@@ -12,7 +11,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { useState } from "react";
 
 const gallery = [
   {
@@ -34,32 +32,9 @@ const gallery = [
 ];
 
 const Environment = () => {
-  const [lightboxOpen, setLightboxOpen] = useState(false);
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const openLightbox = (index: number) => {
-    setCurrentIndex(index);
-    setLightboxOpen(true);
-  };
-
-  const nextImage = () => {
-    setCurrentIndex((prev) => (prev + 1) % gallery.length);
-  };
-
-  const prevImage = () => {
-    setCurrentIndex((prev) => (prev - 1 + gallery.length) % gallery.length);
-  };
-
   return (
     <section className="relative overflow-hidden bg-background py-24 md:py-32">
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-background via-background/70 to-background" />
-      <div className="pointer-events-none absolute inset-0">
-        <img
-          src={fundo02}
-          alt=""
-          className="h-full w-full object-cover opacity-35 mix-blend-overlay"
-        />
-      </div>
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-background via-[rgba(193,192,179,0.03)] to-background" />
       
       <div className="container relative z-10 mx-auto px-6">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
@@ -134,78 +109,48 @@ const Environment = () => {
               className="w-full"
             >
               <CarouselContent>
-                {gallery.map((photo, index) => (
+                {gallery.map((photo) => (
                   <CarouselItem key={photo.alt} className="flex justify-center">
-                    <button
-                      type="button"
-                      onClick={() => openLightbox(index)}
-                      className="group relative aspect-[3/4] w-4/5 overflow-hidden rounded-lg border border-border/60 bg-card transition-all duration-500 hover:shadow-[0_20px_60px_-20px_rgba(114,92,70,0.3)] focus:outline-none focus:ring-2 focus:ring-primary/40 focus:ring-offset-2 focus:ring-offset-background"
-                    >
-                      <img
-                        src={photo.src}
-                        alt={photo.alt}
-                        className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[rgba(29,33,34,0.8)] via-[rgba(29,33,34,0.2)] to-transparent opacity-60 transition-opacity duration-300 group-hover:opacity-80" />
-                      <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                        <span className="flex h-14 w-14 items-center justify-center rounded-lg border border-border/80 bg-background/90 backdrop-blur-sm">
-                          <Maximize2 className="h-6 w-6 text-primary" />
-                          <span className="sr-only">Ampliar imagem</span>
-                        </span>
-                      </div>
-                    </button>
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <button
+                          type="button"
+                          className="group relative aspect-[3/4] w-4/5 overflow-hidden rounded-lg border border-border/60 bg-card transition-all duration-500 hover:shadow-[0_20px_60px_-20px_rgba(114,92,70,0.3)] focus:outline-none focus:ring-2 focus:ring-primary/40 focus:ring-offset-2 focus:ring-offset-background"
+                        >
+                          <img
+                            src={photo.src}
+                            alt={photo.alt}
+                            className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-[rgba(29,33,34,0.8)] via-[rgba(29,33,34,0.2)] to-transparent opacity-60 transition-opacity duration-300 group-hover:opacity-80" />
+                          <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <span className="flex h-14 w-14 items-center justify-center rounded-lg border border-border/80 bg-background/90 backdrop-blur-sm">
+                              <Maximize2 className="h-6 w-6 text-primary" />
+                              <span className="sr-only">Ampliar imagem</span>
+                            </span>
+                          </div>
+                        </button>
+                      </DialogTrigger>
+                      <DialogContent className="max-w-5xl overflow-hidden border border-border/60 bg-background/98 p-0 text-foreground shadow-2xl backdrop-blur-sm sm:rounded-lg">
+                        <div className="relative">
+                          <img
+                            src={photo.src}
+                            alt={photo.alt}
+                            className="h-full w-full object-contain"
+                          />
+                          <DialogClose className="absolute right-4 top-4 z-50 flex h-12 w-12 items-center justify-center rounded-lg border border-border/80 bg-background/95 text-foreground shadow-lg backdrop-blur-sm transition-all hover:bg-background hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-primary">
+                            <X className="h-5 w-5" />
+                            <span className="sr-only">Fechar</span>
+                          </DialogClose>
+                        </div>
+                      </DialogContent>
+                    </Dialog>
                   </CarouselItem>
                 ))}
               </CarouselContent>
               <CarouselPrevious className="left-2" />
               <CarouselNext className="right-2" />
             </Carousel>
-
-            {/* Lightbox Dialog */}
-            <Dialog open={lightboxOpen} onOpenChange={setLightboxOpen}>
-              <DialogContent className="max-w-7xl overflow-hidden border-0 bg-transparent p-0 shadow-none sm:rounded-none [&>button]:hidden">
-                <div className="relative flex items-center justify-center max-h-[80vh]">
-                  <img
-                    src={gallery[currentIndex].src}
-                    alt={gallery[currentIndex].alt}
-                    className="max-h-[80vh] w-auto object-contain"
-                  />
-                  
-                  {/* Botão Fechar */}
-                  <DialogClose asChild>
-                    <button className="absolute right-4 top-4 z-50 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-black/30 text-white backdrop-blur-sm transition-all hover:bg-black/50 focus:outline-none focus:ring-2 focus:ring-white/50">
-                      <X className="h-5 w-5" />
-                      <span className="sr-only">Fechar</span>
-                    </button>
-                  </DialogClose>
-
-                  {/* Botão Anterior */}
-                  <button
-                    onClick={prevImage}
-                    className="absolute left-4 top-1/2 z-50 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/30 text-white backdrop-blur-sm transition-all hover:bg-black/50 focus:outline-none focus:ring-2 focus:ring-white/50"
-                  >
-                    <ChevronLeft className="h-5 w-5" />
-                    <span className="sr-only">Anterior</span>
-                  </button>
-
-                  {/* Botão Próximo */}
-                  <button
-                    onClick={nextImage}
-                    className="absolute right-4 top-1/2 z-50 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/30 text-white backdrop-blur-sm transition-all hover:bg-black/50 focus:outline-none focus:ring-2 focus:ring-white/50"
-                  >
-                    <ChevronRight className="h-5 w-5" />
-                    <span className="sr-only">Próximo</span>
-                  </button>
-
-                  {/* Indicador de posição */}
-                  <div className="absolute bottom-4 left-1/2 z-50 flex -translate-x-1/2 items-center gap-2 rounded-full border border-white/20 bg-black/30 px-3 py-1.5 backdrop-blur-sm">
-                    <span className="text-xs font-medium text-white">
-                      {currentIndex + 1} / {gallery.length}
-                    </span>
-                  </div>
-                </div>
-              </DialogContent>
-            </Dialog>
           </div>
         </div>
       </div>

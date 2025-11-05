@@ -37,7 +37,7 @@ const Contact = () => {
             <Button
               variant="outline"
               size="lg"
-              className="gap-2 border-primary/40 bg-card/60 px-8 py-6 text-base text-foreground hover:border-primary hover:bg-primary/10 hover:text-primary"
+              className="gap-2 border-primary/40 bg-background/60 px-8 py-6 text-base hover:bg-primary/10"
               onClick={() => window.open("https://www.instagram.com/marcoklasener/", "_blank")}
             >
               <Instagram className="h-5 w-5" />
@@ -48,8 +48,8 @@ const Contact = () => {
           <div className="grid md:grid-cols-2 gap-8 mt-16">
             <div className="bg-card p-8 rounded-lg border border-border">
               <MapPin className="w-8 h-8 text-primary mb-4" />
-              <h3 className="text-2xl font-bold mb-3 text-primary">Clínica Marco Kläsener</h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <h3 className="text-2xl font-bold mb-2 text-primary">Panambi</h3>
+              <p className="text-muted-foreground">
                 Rua Benjamin Constant, 402<br />
                 Centro, Panambi/RS
               </p>
@@ -57,8 +57,8 @@ const Contact = () => {
 
             <div className="bg-card p-8 rounded-lg border border-border">
               <MapPin className="w-8 h-8 text-primary mb-4" />
-              <h3 className="text-2xl font-bold mb-3 text-primary">Unidade Passo Fundo</h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <h3 className="text-2xl font-bold mb-2 text-primary">Passo Fundo</h3>
+              <p className="text-muted-foreground">
                 Rua Doutor Vergueiro, 411<br />
                 Vila Rodrigues, Passo Fundo/RS
               </p>
