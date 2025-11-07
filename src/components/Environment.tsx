@@ -37,26 +37,28 @@ const Environment = () => {
   <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-background via-[rgba(255,255,255,0.03)] to-background" />
       
       <div className="container relative z-10 mx-auto px-6">
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
+        <div className="grid gap-12 text-center lg:grid-cols-2 lg:gap-16 lg:text-left">
           {/* Coluna da esquerda - Texto */}
-          <div className="flex flex-col justify-center space-y-8">
-            <div>
-              <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-border/60 bg-card/50 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground/80">
+          <div className="flex flex-col items-center justify-center space-y-8 lg:items-start">
+            <div className="w-full">
+              <div className="mb-6 flex justify-center lg:justify-start">
+                <div className="inline-flex items-center gap-2 rounded-full border border-border/60 bg-card/50 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground/80">
                 <Sparkles className="h-3.5 w-3.5" />
                 Nosso Espaço
               </div>
-              <h2 className="font-heading mb-6 text-4xl font-normal leading-tight text-foreground md:text-5xl">
+              </div>
+              <h2 className="font-display mb-6 text-4xl font-normal leading-tight text-foreground md:text-5xl text-center lg:text-left">
                 Ambiente projetado para o seu{" "}
                 <span className="text-primary">bem-estar</span>
               </h2>
-              <p className="text-lg leading-relaxed text-muted-foreground">
+              <p className="text-lg leading-relaxed text-muted-foreground max-w-3xl mx-auto lg:mx-0">
                 Cada detalhe foi cuidadosamente pensado para oferecer conforto, privacidade e uma experiência acolhedora. Tecnologia de ponta em um ambiente que inspira tranquilidade.
               </p>
             </div>
 
-            <div className="space-y-6">
-              <div className="flex gap-4">
-                <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg border border-border/60 bg-card/50">
+            <div className="w-full max-w-2xl space-y-6 mx-auto lg:mx-0">
+              <div className="flex flex-col items-center gap-4 text-center sm:flex-row sm:items-start sm:text-left">
+                <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg border border-border/60 bg-card/50 mx-auto sm:mx-0">
                   <Sparkles className="h-5 w-5 text-primary" />
                 </div>
                 <div>
@@ -69,8 +71,8 @@ const Environment = () => {
                 </div>
               </div>
 
-              <div className="flex gap-4">
-                <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg border border-border/60 bg-card/50">
+              <div className="flex flex-col items-center gap-4 text-center sm:flex-row sm:items-start sm:text-left">
+                <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg border border-border/60 bg-card/50 mx-auto sm:mx-0">
                   <Sparkles className="h-5 w-5 text-primary" />
                 </div>
                 <div>
@@ -83,8 +85,8 @@ const Environment = () => {
                 </div>
               </div>
 
-              <div className="flex gap-4">
-                <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg border border-border/60 bg-card/50">
+              <div className="flex flex-col items-center gap-4 text-center sm:flex-row sm:items-start sm:text-left">
+                <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg border border-border/60 bg-card/50 mx-auto sm:mx-0">
                   <Sparkles className="h-5 w-5 text-primary" />
                 </div>
                 <div>
@@ -100,7 +102,7 @@ const Environment = () => {
           </div>
 
           {/* Coluna da direita - Slider de Imagens */}
-          <div className="relative">
+          <div className="relative mx-auto lg:mx-0">
             <Carousel
               opts={{
                 align: "center",

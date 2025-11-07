@@ -64,7 +64,8 @@ export default {
       },
       fontFamily: {
         sans: ['"Work Sans"', 'Inter', 'system-ui', 'sans-serif'],
-        heading: ['"Nanum Myeongjo"', 'Georgia', 'serif'],
+        heading: ['"Work Sans"', 'Inter', 'system-ui', 'sans-serif'],
+        display: ['"Nanum Myeongjo"', 'Georgia', 'serif'],
       },
       borderRadius: {
         lg: "var(--radius)",

@@ -56,15 +56,15 @@ const Procedures = () => {
       <div className="pointer-events-none absolute -bottom-24 right-6 h-[360px] w-[360px] rounded-full bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.08),_transparent_65%)] blur-2xl" />
 
       <div className="container relative z-10 mx-auto px-6">
-        <div className="mb-16 flex flex-col gap-10 md:flex-row md:items-end md:justify-between">
-          <div className="max-w-2xl space-y-4">
+        <div className="mb-16 flex flex-col items-center gap-10 text-center md:flex-row md:items-end md:justify-between md:text-left">
+          <div className="max-w-2xl space-y-4 mx-auto md:mx-0">
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-primary/70">
               Procedimentos
             </p>
-            <h2 className="font-heading text-4xl font-normal leading-tight md:text-5xl">
+            <h2 className="font-display text-4xl font-normal leading-tight md:text-5xl text-center md:text-left">
               Nossos <span className="text-primary">Procedimentos</span>
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-lg text-muted-foreground text-center md:text-left">
               Tratamentos avançados e personalizados para realçar sua beleza natural
             </p>
           </div>
@@ -72,7 +72,7 @@ const Procedures = () => {
             asChild
             variant="outline"
             size="lg"
-            className="self-start border-primary/40 bg-background/60 px-8 py-6 text-base"
+            className="self-center border-primary/40 bg-background/60 px-8 py-6 text-base md:self-start"
           >
             <a href="#contato">Agendar consulta</a>
           </Button>
@@ -86,7 +86,7 @@ const Procedures = () => {
               <Card
                 key={procedure.title}
                 className={cn(
-                  "group relative flex h-full w-full flex-col overflow-hidden rounded-lg border bg-card/60 p-8 text-foreground backdrop-blur-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_32px_90px_-45px_rgba(0,0,0,0.45)]",
+                  "group relative flex h-full w-full flex-col items-center overflow-hidden rounded-lg border bg-card/60 p-8 text-center text-foreground backdrop-blur-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_32px_90px_-45px_rgba(0,0,0,0.45)] md:text-left md:items-start",
                   isHighlight
                     ? "border-primary/40 bg-gradient-to-br from-primary/10 via-card/60 to-card/60"
                     : "border-border/60 hover:border-primary/30"
@@ -98,7 +98,7 @@ const Procedures = () => {
                 </div>
 
                 {/* Cabeçalho do card */}
-                <div className="relative mb-8 flex items-start justify-between">
+                <div className="relative mb-8 flex flex-col items-center gap-6 text-center md:flex-row md:items-start md:justify-between md:text-left">
                   <div
                     className={cn(
                       "relative flex h-14 w-14 items-center justify-center overflow-hidden rounded-lg border transition-all duration-500",
@@ -110,8 +110,8 @@ const Procedures = () => {
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.1),_transparent_70%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                     <procedure.icon className="relative h-7 w-7" />
                   </div>
-                  
-                  <div className="flex flex-col items-end gap-2">
+
+                  <div className="flex flex-col items-center gap-2 md:items-end">
                     <span
                       className={cn(
                         "text-xs font-semibold uppercase tracking-[0.4em] transition-colors duration-300",
@@ -130,10 +130,10 @@ const Procedures = () => {
 
                 {/* Conteúdo */}
                 <div className="relative flex-1 space-y-4">
-                  <h3 className="font-heading text-2xl font-normal leading-tight text-foreground transition-colors duration-300 group-hover:text-primary">
+                  <h3 className="font-heading text-2xl font-normal leading-tight text-foreground transition-colors duration-300 group-hover:text-primary text-center md:text-left">
                     {procedure.title}
                   </h3>
-                  <p className="text-base leading-relaxed text-muted-foreground">
+                  <p className="text-base leading-relaxed text-muted-foreground text-center md:text-left">
                     {procedure.description}
                   </p>
                 </div>

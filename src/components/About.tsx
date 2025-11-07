@@ -4,9 +4,9 @@ const About = () => {
   return (
     <section id="sobre" className="py-24 md:py-32 bg-card">
       <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid items-center gap-16 text-center lg:grid-cols-2 lg:text-left">
           {/* Image */}
-          <div className="relative order-2 lg:order-1">
+          <div className="relative order-2 mx-auto max-w-sm lg:order-1 lg:max-w-none">
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl transform -rotate-3" />
               <img
@@ -18,11 +18,11 @@ const About = () => {
           </div>
 
           {/* Content */}
-          <div className="order-1 lg:order-2">
-            <h2 className="font-heading text-4xl md:text-5xl font-normal mb-6">
+          <div className="order-1 flex flex-col items-center lg:order-2 lg:items-start">
+            <h2 className="font-display text-4xl md:text-5xl font-normal mb-6 text-center lg:text-left">
               Sobre o Dr. Marco <span className="text-primary">Kläsener</span>
             </h2>
-            <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+            <div className="space-y-6 text-lg text-muted-foreground leading-relaxed max-w-3xl text-center lg:text-left mx-auto lg:mx-0">
               <p>
                 Sou o Dr. Marco Kläsener, médico pós-graduado em Medicina Estética pelo Instituto BWS Primum, em São Paulo (CRMRS 51045).
               </p>

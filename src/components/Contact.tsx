@@ -13,7 +13,7 @@ const Contact = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="font-heading text-4xl md:text-5xl font-normal mb-6">
+            <h2 className="font-display text-4xl md:text-5xl font-normal mb-6">
               Pronto para realçar sua beleza com{" "}
               <span className="text-primary">naturalidade?</span>
             </h2>
@@ -45,8 +45,8 @@ const Contact = () => {
             </Button>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 mt-16">
-            <div className="bg-card p-8 rounded-lg border border-border">
+          <div className="grid gap-8 mt-16 text-center md:grid-cols-2">
+            <div className="bg-card p-8 rounded-lg border border-border flex flex-col items-center text-center">
               <MapPin className="w-8 h-8 text-primary mb-4" />
               <h3 className="font-heading text-2xl font-normal mb-2 text-primary">Panambi</h3>
               <p className="text-muted-foreground">
@@ -55,7 +55,7 @@ const Contact = () => {
               </p>
             </div>
 
-            <div className="bg-card p-8 rounded-lg border border-border">
+            <div className="bg-card p-8 rounded-lg border border-border flex flex-col items-center text-center">
               <MapPin className="w-8 h-8 text-primary mb-4" />
               <h3 className="font-heading text-2xl font-normal mb-2 text-primary">Passo Fundo</h3>
               <p className="text-muted-foreground">

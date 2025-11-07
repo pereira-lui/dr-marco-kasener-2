@@ -17,18 +17,18 @@ const Testimonials = () => {
     <section className="py-24 md:py-32 bg-card">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="font-heading text-4xl md:text-5xl font-normal mb-6">
+          <h2 className="font-display text-4xl md:text-5xl font-normal mb-6">
             O que dizem <span className="text-primary">nossos pacientes</span>
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid max-w-5xl gap-8 mx-auto md:grid-cols-2">
           {testimonials.map((testimonial, index) => (
             <Card
               key={index}
-              className="p-8 bg-background border-border hover:border-primary/50 transition-all duration-300"
+              className="flex h-full flex-col items-center p-8 text-center bg-background border-border hover:border-primary/50 transition-all duration-300"
             >
-              <Quote className="w-12 h-12 text-primary/20 mb-6" />
+              <Quote className="w-12 h-12 text-primary/20 mb-6 mx-auto" />
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed italic">
                 "{testimonial.text}"
               </p>

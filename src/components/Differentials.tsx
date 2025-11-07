@@ -42,7 +42,7 @@ const Differentials = () => {
             <Sparkles className="h-3.5 w-3.5" />
             Diferenciais
           </div>
-          <h2 className="font-heading mb-6 text-4xl font-normal leading-tight text-foreground md:text-5xl">
+          <h2 className="font-display mb-6 text-4xl font-normal leading-tight text-foreground md:text-5xl">
             Por que escolher nosso{" "}
             <span className="text-primary">atendimento?</span>
           </h2>
@@ -57,19 +57,19 @@ const Differentials = () => {
               key={differential.title}
               className="group relative overflow-hidden rounded-lg border border-border/60 bg-card/40 transition-all duration-500 hover:border-primary/40 hover:bg-card/60 hover:shadow-[0_20px_60px_-20px_rgba(0,0,0,0.3)]"
             >
-              <div className="flex flex-col gap-6 p-8 md:flex-row md:items-center md:gap-10">
+              <div className="flex flex-col items-center gap-6 p-8 text-center md:flex-row md:items-center md:gap-10 md:text-left">
                 {/* Número e Ícone */}
-                <div className="flex items-center gap-6 md:w-48 md:flex-shrink-0">
+                <div className="flex flex-col items-center gap-4 text-center md:w-48 md:flex-row md:items-center md:gap-6 md:text-left">
                   <span className="text-5xl font-bold text-primary/20 transition-colors duration-300 group-hover:text-primary/30">
                     0{index + 1}
                   </span>
-                  <div className="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-lg border border-border/60 bg-background/60 text-primary transition-all duration-300 group-hover:scale-110 group-hover:border-primary/40 group-hover:bg-primary/10">
+                  <div className="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-lg border border-border/60 bg-background/60 text-primary transition-all duration-300 group-hover:scale-110 group-hover:border-primary/40 group-hover:bg-primary/10 mx-auto md:mx-0">
                     <differential.icon className="h-8 w-8" />
                   </div>
                 </div>
 
                 {/* Conteúdo */}
-                <div className="flex-1 space-y-2">
+                <div className="flex-1 space-y-2 text-center md:text-left">
                   <h3 className="font-heading text-2xl font-normal text-foreground transition-colors duration-300 group-hover:text-primary">
                     {differential.title}
                   </h3>
