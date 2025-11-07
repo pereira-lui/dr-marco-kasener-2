@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import tailwindcssAnimate from "tailwindcss-animate";
 
 export default {
   darkMode: ["class"],
@@ -62,7 +63,8 @@ export default {
         'gold': 'hsl(var(--gold))',
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['"Work Sans"', 'Inter', 'system-ui', 'sans-serif'],
+        heading: ['"Nanum Myeongjo"', 'Georgia', 'serif'],
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -93,5 +95,5 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [tailwindcssAnimate],
 } satisfies Config;

@@ -43,17 +43,17 @@ const Procedures = () => {
       id="procedimentos"
       className="relative overflow-hidden bg-background py-24 text-foreground md:py-32"
     >
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-background via-background/85 to-[rgba(193,192,179,0.08)]" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-background via-background/85 to-[rgba(255,255,255,0.08)]" />
       <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-1/2 md:block">
         <img
           src={proceduresBg}
           alt=""
           className="h-full w-full object-cover opacity-40 mix-blend-screen"
         />
-        <div className="absolute inset-0 bg-gradient-to-l from-[rgba(193,192,179,0.2)] via-background/75 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-l from-[rgba(255,255,255,0.2)] via-background/75 to-background" />
       </div>
-  <div className="pointer-events-none absolute -left-32 top-24 h-[420px] w-[420px] rounded-full bg-[radial-gradient(circle_at_center,_rgba(114,92,70,0.18),_transparent_70%)] blur-3xl" />
-  <div className="pointer-events-none absolute -bottom-24 right-6 h-[360px] w-[360px] rounded-full bg-[radial-gradient(circle_at_center,_rgba(193,192,179,0.16),_transparent_65%)] blur-2xl" />
+      <div className="pointer-events-none absolute -left-32 top-24 h-[420px] w-[420px] rounded-full bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.12),_transparent_70%)] blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-24 right-6 h-[360px] w-[360px] rounded-full bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.08),_transparent_65%)] blur-2xl" />
 
       <div className="container relative z-10 mx-auto px-6">
         <div className="mb-16 flex flex-col gap-10 md:flex-row md:items-end md:justify-between">
@@ -61,7 +61,7 @@ const Procedures = () => {
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-primary/70">
               Procedimentos
             </p>
-            <h2 className="text-4xl font-bold leading-tight md:text-5xl">
+            <h2 className="font-heading text-4xl font-normal leading-tight md:text-5xl">
               Nossos <span className="text-primary">Procedimentos</span>
             </h2>
             <p className="text-lg text-muted-foreground">
@@ -86,7 +86,7 @@ const Procedures = () => {
               <Card
                 key={procedure.title}
                 className={cn(
-                  "group relative flex h-full w-full flex-col overflow-hidden rounded-lg border bg-card/60 p-8 text-foreground backdrop-blur-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_32px_90px_-45px_rgba(114,92,70,0.5)]",
+                  "group relative flex h-full w-full flex-col overflow-hidden rounded-lg border bg-card/60 p-8 text-foreground backdrop-blur-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_32px_90px_-45px_rgba(0,0,0,0.45)]",
                   isHighlight
                     ? "border-primary/40 bg-gradient-to-br from-primary/10 via-card/60 to-card/60"
                     : "border-border/60 hover:border-primary/30"
@@ -94,7 +94,7 @@ const Procedures = () => {
               >
                 {/* Efeito de brilho ao hover */}
                 <div className="absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(114,92,70,0.12),_transparent_60%)]" />
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(255,255,255,0.08),_transparent_60%)]" />
                 </div>
 
                 {/* Cabeçalho do card */}
@@ -103,11 +103,11 @@ const Procedures = () => {
                     className={cn(
                       "relative flex h-14 w-14 items-center justify-center overflow-hidden rounded-lg border transition-all duration-500",
                       isHighlight
-                        ? "border-primary/50 bg-primary/15 text-primary shadow-[0_8px_24px_-8px_rgba(114,92,70,0.4)] group-hover:scale-110 group-hover:shadow-[0_12px_32px_-8px_rgba(114,92,70,0.5)]"
+                        ? "border-primary/50 bg-primary/15 text-primary shadow-[0_8px_24px_-8px_rgba(0,0,0,0.4)] group-hover:scale-110 group-hover:shadow-[0_12px_32px_-8px_rgba(0,0,0,0.5)]"
                         : "border-border/60 bg-card/80 text-primary/80 group-hover:scale-110 group-hover:border-primary/40 group-hover:bg-primary/10 group-hover:text-primary"
                     )}
                   >
-                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(114,92,70,0.15),_transparent_70%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.1),_transparent_70%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                     <procedure.icon className="relative h-7 w-7" />
                   </div>
                   
@@ -130,7 +130,7 @@ const Procedures = () => {
 
                 {/* Conteúdo */}
                 <div className="relative flex-1 space-y-4">
-                  <h3 className="text-2xl font-semibold leading-tight text-foreground transition-colors duration-300 group-hover:text-primary">
+                  <h3 className="font-heading text-2xl font-normal leading-tight text-foreground transition-colors duration-300 group-hover:text-primary">
                     {procedure.title}
                   </h3>
                   <p className="text-base leading-relaxed text-muted-foreground">

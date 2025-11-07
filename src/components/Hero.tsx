@@ -23,7 +23,7 @@ const Hero = () => {
             <p className="text-primary text-sm md:text-base mb-4 tracking-wider uppercase">
               Medicina Estética
             </p>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+            <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-normal mb-6 leading-tight">
               Naturalidade é o{" "}
               <span className="text-primary">novo luxo</span>
             </h1>
@@ -46,11 +46,11 @@ const Hero = () => {
           {/* Image */}
           <div className="relative animate-slide-up lg:justify-self-end">
             <div className="relative">
-              <div className="absolute inset-0 rotate-3 rounded-sm bg-gradient-to-br from-primary/20 to-accent/20" />
+              <div className="absolute inset-0 rotate-3 rounded-[0.75rem] bg-gradient-to-br from-primary/20 to-accent/20" />
               <img
                 src={doctorImage}
                 alt="Dr. Marco Kläsener"
-                className="relative w-full max-w-lg rounded-sm object-cover shadow-2xl"
+                className="relative w-full max-w-lg rounded-[0.75rem] object-cover shadow-2xl"
               />
             </div>
           </div>

@@ -17,7 +17,7 @@ const Testimonials = () => {
     <section className="py-24 md:py-32 bg-card">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="font-heading text-4xl md:text-5xl font-normal mb-6">
             O que dizem <span className="text-primary">nossos pacientes</span>
           </h2>
         </div>

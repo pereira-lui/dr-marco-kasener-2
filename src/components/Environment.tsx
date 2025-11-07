@@ -34,7 +34,7 @@ const gallery = [
 const Environment = () => {
   return (
     <section className="relative overflow-hidden bg-background py-24 md:py-32">
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-background via-[rgba(193,192,179,0.03)] to-background" />
+  <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-background via-[rgba(255,255,255,0.03)] to-background" />
       
       <div className="container relative z-10 mx-auto px-6">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
@@ -45,7 +45,7 @@ const Environment = () => {
                 <Sparkles className="h-3.5 w-3.5" />
                 Nosso Espaço
               </div>
-              <h2 className="mb-6 text-4xl font-semibold leading-tight text-foreground md:text-5xl">
+              <h2 className="font-heading mb-6 text-4xl font-normal leading-tight text-foreground md:text-5xl">
                 Ambiente projetado para o seu{" "}
                 <span className="text-primary">bem-estar</span>
               </h2>
@@ -60,7 +60,7 @@ const Environment = () => {
                   <Sparkles className="h-5 w-5 text-primary" />
                 </div>
                 <div>
-                  <h3 className="mb-2 text-lg font-semibold text-foreground">
+                  <h3 className="font-heading mb-2 text-lg font-normal text-foreground">
                     Conforto e Privacidade
                   </h3>
                   <p className="text-sm leading-relaxed text-muted-foreground">
@@ -74,7 +74,7 @@ const Environment = () => {
                   <Sparkles className="h-5 w-5 text-primary" />
                 </div>
                 <div>
-                  <h3 className="mb-2 text-lg font-semibold text-foreground">
+                  <h3 className="font-heading mb-2 text-lg font-normal text-foreground">
                     Tecnologia Avançada
                   </h3>
                   <p className="text-sm leading-relaxed text-muted-foreground">
@@ -88,7 +88,7 @@ const Environment = () => {
                   <Sparkles className="h-5 w-5 text-primary" />
                 </div>
                 <div>
-                  <h3 className="mb-2 text-lg font-semibold text-foreground">
+                  <h3 className="font-heading mb-2 text-lg font-normal text-foreground">
                     Higiene e Segurança
                   </h3>
                   <p className="text-sm leading-relaxed text-muted-foreground">
@@ -115,14 +115,14 @@ const Environment = () => {
                       <DialogTrigger asChild>
                         <button
                           type="button"
-                          className="group relative aspect-[3/4] w-4/5 overflow-hidden rounded-lg border border-border/60 bg-card transition-all duration-500 hover:shadow-[0_20px_60px_-20px_rgba(114,92,70,0.3)] focus:outline-none focus:ring-2 focus:ring-primary/40 focus:ring-offset-2 focus:ring-offset-background"
+                          className="group relative aspect-[3/4] w-4/5 overflow-hidden rounded-lg border border-border/60 bg-card transition-all duration-500 hover:shadow-[0_20px_60px_-20px_rgba(0,0,0,0.35)] focus:outline-none focus:ring-2 focus:ring-primary/40 focus:ring-offset-2 focus:ring-offset-background"
                         >
                           <img
                             src={photo.src}
                             alt={photo.alt}
                             className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                           />
-                          <div className="absolute inset-0 bg-gradient-to-t from-[rgba(29,33,34,0.8)] via-[rgba(29,33,34,0.2)] to-transparent opacity-60 transition-opacity duration-300 group-hover:opacity-80" />
+                          <div className="absolute inset-0 bg-gradient-to-t from-[rgba(24,24,24,0.8)] via-[rgba(24,24,24,0.2)] to-transparent opacity-60 transition-opacity duration-300 group-hover:opacity-80" />
                           <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                             <span className="flex h-14 w-14 items-center justify-center rounded-lg border border-border/80 bg-background/90 backdrop-blur-sm">
                               <Maximize2 className="h-6 w-6 text-primary" />

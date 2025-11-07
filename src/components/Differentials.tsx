@@ -34,7 +34,7 @@ const Differentials = () => {
       id="diferenciais"
       className="relative overflow-hidden bg-background py-24 text-foreground md:py-32"
     >
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[rgba(193,192,179,0.04)] via-background to-[rgba(193,192,179,0.04)]" />
+  <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[rgba(255,255,255,0.04)] via-background to-[rgba(255,255,255,0.04)]" />
       
       <div className="container relative z-10 mx-auto px-6">
         <div className="mx-auto mb-20 max-w-3xl text-center">
@@ -42,7 +42,7 @@ const Differentials = () => {
             <Sparkles className="h-3.5 w-3.5" />
             Diferenciais
           </div>
-          <h2 className="mb-6 text-4xl font-semibold leading-tight text-foreground md:text-5xl">
+          <h2 className="font-heading mb-6 text-4xl font-normal leading-tight text-foreground md:text-5xl">
             Por que escolher nosso{" "}
             <span className="text-primary">atendimento?</span>
           </h2>
@@ -55,7 +55,7 @@ const Differentials = () => {
           {differentials.map((differential, index) => (
             <div
               key={differential.title}
-              className="group relative overflow-hidden rounded-lg border border-border/60 bg-card/40 transition-all duration-500 hover:border-primary/40 hover:bg-card/60 hover:shadow-[0_20px_60px_-20px_rgba(114,92,70,0.25)]"
+              className="group relative overflow-hidden rounded-lg border border-border/60 bg-card/40 transition-all duration-500 hover:border-primary/40 hover:bg-card/60 hover:shadow-[0_20px_60px_-20px_rgba(0,0,0,0.3)]"
             >
               <div className="flex flex-col gap-6 p-8 md:flex-row md:items-center md:gap-10">
                 {/* Número e Ícone */}
@@ -70,7 +70,7 @@ const Differentials = () => {
 
                 {/* Conteúdo */}
                 <div className="flex-1 space-y-2">
-                  <h3 className="text-2xl font-semibold text-foreground transition-colors duration-300 group-hover:text-primary">
+                  <h3 className="font-heading text-2xl font-normal text-foreground transition-colors duration-300 group-hover:text-primary">
                     {differential.title}
                   </h3>
                   <p className="text-base leading-relaxed text-muted-foreground">

@@ -19,7 +19,7 @@ const About = () => {
 
           {/* Content */}
           <div className="order-1 lg:order-2">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="font-heading text-4xl md:text-5xl font-normal mb-6">
               Sobre o Dr. Marco <span className="text-primary">Kläsener</span>
             </h2>
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
