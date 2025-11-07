@@ -161,6 +161,16 @@ All colors MUST be HSL.
     min-height: 75vh !important;
   }
 
+  /* Header menor */
+  header .container {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+  header img {
+    height: 2.25rem !important;
+    max-height: 2.25rem !important;
+  }
+
   /* Imagens do Marco - altura máxima 90vh */
   img[src*="doctor-"],
   img[src*="consultorio"] {
