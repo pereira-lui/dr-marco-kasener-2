@@ -161,6 +161,18 @@ All colors MUST be HSL.
     min-height: 75vh !important;
   }
 
+  /* Imagens do Marco - altura máxima 90vh */
+  img[src*="doctor-"],
+  img[src*="consultorio"] {
+    max-height: 90vh !important;
+    height: auto !important;
+    width: auto !important;
+    object-fit: contain !important;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   /* Reduzir fontes */
   h1 {
     font-size: 3rem !important;
