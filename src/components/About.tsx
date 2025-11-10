@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import doctorImage from "@/assets/doctor-2.jpg";
 
 const About = () => {
@@ -32,6 +33,13 @@ const About = () => {
                 Cada atendimento é realizado com escuta ativa, transparência e foco em resultados sutis, respeitando sua identidade e seus objetivos.
               </p>
             </div>
+            <Button
+              size="lg"
+              className="mt-8 bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 mx-auto lg:mx-0"
+              onClick={() => window.open("https://wa.me/5554996833828", "_blank")}
+            >
+              Agende sua consulta
+            </Button>
           </div>
         </div>
       </div>
