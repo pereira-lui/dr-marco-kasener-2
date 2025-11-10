@@ -21,7 +21,6 @@ const Hero = () => {
           {/* Image */}
           <div className="relative order-1 animate-slide-up lg:order-2 lg:justify-self-end">
             <div className="relative mx-auto max-w-xs sm:max-w-sm lg:max-w-none">
-              <div className="absolute inset-0 rotate-3 rounded-[0.75rem] bg-gradient-to-br from-primary/20 to-accent/20" />
               <img
                 src={doctorImage}
                 alt="Dr. Marco Kläsener"

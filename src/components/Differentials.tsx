@@ -39,7 +39,7 @@ const Differentials = () => {
       <div className="container relative z-10 mx-auto px-6">
         <div className="mx-auto mb-20 max-w-3xl text-center">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-border/60 bg-card/50 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground/80">
-            <Sparkles className="h-3.5 w-3.5" />
+            
             Diferenciais
           </div>
           <h2 className="font-display mb-6 text-4xl font-normal leading-tight text-foreground md:text-5xl">

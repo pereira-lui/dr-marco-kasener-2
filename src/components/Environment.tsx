@@ -43,7 +43,7 @@ const Environment = () => {
             <div className="w-full">
               <div className="mb-6 flex justify-center lg:justify-start">
                 <div className="inline-flex items-center gap-2 rounded-full border border-border/60 bg-card/50 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground/80">
-                <Sparkles className="h-3.5 w-3.5" />
+                
                 Nosso Espaço
               </div>
               </div>

@@ -8,7 +8,6 @@ const About = () => {
           {/* Image */}
           <div className="relative order-2 mx-auto max-w-sm lg:order-1 lg:max-w-none">
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl transform -rotate-3" />
               <img
                 src={doctorImage}
                 alt="Dr. Marco Kläsener"
